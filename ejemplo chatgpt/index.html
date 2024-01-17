@@ -3,17 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My To-Do List</title>
-    <link rel="stylesheet" href="../css/createStyle.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Lista de Tareas</title>
 </head>
 <body>
-    <main>
-        <section id="title">
-            <h1>Crear una nueva tarea</h1>
-        </section>
-
-        <section id="createfield">
-
+    <div class="container">
+        <h1>Lista de Tareas</h1>
+        <button id="addTaskBtn">Agregar Tarea</button>
+        <div id="taskForm" class="hidden">
             <form id="taskForm">
                 <label for="taskTitle">Título:</label>
                 <input type="text" id="taskTitle" required>
@@ -21,14 +18,12 @@
                 <textarea id="taskDescription" required></textarea>
                 <label for="taskDate">Fecha:</label>
                 <input type="date" id="taskDate" required>
-                <button type="button" id="saveTaskBtn">Crear Tarea</button>
+                <button type="button" id="saveTaskBtn">Guardar Tarea</button>
             </form>
+        </div>
+        <ul id="taskList"></ul>
+    </div>
 
-            
-
-        </section>
-
-    </main>
-    <script src="script/script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
